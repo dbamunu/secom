@@ -1,10 +1,9 @@
+## Summary:
+Data from a semi-conductor manufacturing process at SECOM.
+SECOM Dataset: 1567 examples 591 features, 104 fails.
 Dataset: McCann, M. & Johnston, A. (2008). SECOM [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C54305.
 
-Summary:
-Data from a semi-conductor manufacturing process at SECOM.
-SECOM Dataset: 1567 examples 591 features, 104 fails
-
-Project deliverables:
+## Project deliverables:
 
 1. Business problem and analytical objectives: Define the business problem, prediction target and success criteria.
 2. Data quality and exploratory analysis: Investigate missing values, distributions, outliers, class imbalance and relationships between variables.
