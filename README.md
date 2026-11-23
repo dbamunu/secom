@@ -1,21 +1,61 @@
-## Summary:
-Data from a semi-conductor manufacturing process at SECOM.
-SECOM Dataset: 1567 examples 591 features, 104 fails.
-Dataset: McCann, M. & Johnston, A. (2008). SECOM [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C54305.
+# Manufacturing Quality Prediction – SECOM Dataset
 
-## Project deliverables:
+## Project Summary
 
-1. Business problem and analytical objectives: Define the business problem, prediction target and success criteria.
-2. Data quality and exploratory analysis: Investigate missing values, distributions, outliers, class imbalance and relationships between variables.
-3. Statistical investigation: Investigate differences between defective and non-defective products and identify potentially informative features.
-4. Predictive modelling: Develop baseline and improved classification models.
-5. Model evaluation: Evaluate precision, recall, F1-score, confusion matrix, ROC-AUC and PR-AUC. Explain the trade-offs.
-6. Business recommendations: Explain how the model could support quality control, including limitations and recommendations for deployment.
+This project investigates the application of statistical analysis and machine learning to predict manufacturing quality failures using the SECOM semiconductor manufacturing dataset from the UCI Machine Learning Repository.
 
+The dataset contains measurements collected during a semiconductor manufacturing process. The objective is to analyse manufacturing process data, identify potentially informative sensor measurements and develop predictive models to distinguish between successful and failed quality outcomes.
 
-- FSmethod (40 features) BER % True + % True - %
-- S2N (signal to noise) 34.5 +-2.6 57.8 +-5.3 73.1 +2.1
-- Ttest 33.7 +-2.1 59.6 +-4.7 73.0 +-1.8
-- Relief 40.1 +-2.8 48.3 +-5.9 71.6 +-3.2
-- Pearson 34.1 +-2.0 57.4 +-4.3 74.4 +-4.9
+### Dataset Overview
 
+- **Observations:** 1,567 manufacturing records
+- **Input features:** 590 process measurement variables
+- **Target variable:** Manufacturing quality outcome (pass or fail)
+- **Failed observations:** 104
+- **Passed observations:** 1,463
+
+The dataset presents several analytical challenges, including missing values, a high-dimensional feature space and an imbalanced target variable.
+
+**Dataset source:**
+
+McCann, M. & Johnston, A. (2008). SECOM [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C54305.
+
+## Project Objectives and Deliverables
+
+### 1. Business Problem and Analytical Objectives
+- Define the manufacturing quality prediction problem.
+- Identify the prediction target and relevant business objectives.
+- Establish appropriate model evaluation criteria based on the cost of missed quality failures and false alarms.
+
+### 2. Data Quality Assessment and Exploratory Data Analysis
+- Assess data completeness and missing-value patterns.
+- Investigate feature distributions and potential outliers.
+- Analyse target class distribution and class imbalance.
+- Explore relationships and correlations between process measurements.
+
+### 3. Statistical Analysis and Feature Investigation
+- Investigate differences in process measurements between passing and failing observations.
+- Apply appropriate statistical tests to identify potentially informative features.
+- Examine feature relationships, redundancy and potential multicollinearity.
+- Assess the implications of statistical findings for feature selection.
+
+### 4. Predictive Model Development
+- Establish a baseline classification model.
+- Develop and compare suitable machine learning classification algorithms.
+- Investigate feature selection and class imbalance handling techniques.
+- Apply appropriate preprocessing and cross-validation strategies.
+
+### 5. Model Evaluation and Comparison
+Evaluate model performance using:
+- Precision and recall
+- F1-score
+- Confusion matrix
+- ROC-AUC
+- Precision-Recall AUC (PR-AUC)
+
+Compare models and discuss the trade-offs between detecting manufacturing failures and generating false alarms.
+
+### 6. Business Recommendations and Limitations
+- Translate model findings into actionable manufacturing quality-control recommendations.
+- Discuss how predictive insights could support inspection and process monitoring.
+- Identify model limitations, data constraints and potential deployment considerations.
