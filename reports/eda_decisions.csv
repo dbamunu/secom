@@ -1,0 +1,9 @@
+Finding,Evidence,Modelling decision
+Class imbalance,6.64% failures (104 of 1567); 17 failures in test set,"Class weights or resampling inside CV only; tune the decision threshold; lead with PR-AUC, recall and precision, not accuracy"
+Missing values,538 features have gaps; 32 exceed 40% missing,"Drop features above 40% missing and median-impute the rest, fitted inside the pipeline"
+Constant features,"116 constant, 6 near-constant",Remove with a variance threshold inside the pipeline
+Scale and skew,Std spans 1.0e-04 to 6.6e+03; 269 features with |skew| > 2,Standardise for linear models; consider a robust or quantile transform
+Weak univariate signal,Best single-feature AUC 0.73; 19 features pass FDR 5%,Expect modest scores; compare against a dummy baseline; do not over-interpret feature rankings
+Redundancy,264 feature pairs with |corr| > 0.95,Regularisation and feature selection inside CV; keep k as a tuned hyperparameter
+Dimensionality,126 principal components explain 90% of variance (of 440 features),High-dimensional but compressible; try L1 or tree models and optionally PCA
+Drift over time,"285 features differ between train and test (KS, p < 0.001)",Use a temporal holdout and report it as the headline estimate; note drift as a limitation
